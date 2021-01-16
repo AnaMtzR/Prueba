@@ -1,0 +1,35 @@
+Serial.begin(9600);
+   Serial.print("A ");
+   Serial.println(contador);
+   
+    
+Definimos Pin de la placa que ocupará el sensor 
+Creamos una variable contador 
+Creamos una variable para las terminales
+Creamos una variable del estado del sensor
+
+
+Se declara al sensor de arduino uno como entrada de la señal digital es decir entran 5v
+definimos cuales son las terminales de tipo salida en este caso los pines del 6 al 12 
+Asignamos valor de encendido a las terminales del 6 al 11 para que muestre en el display el numero 0
+  
+Leemos el valor que tiene el sensor y lo asignamos a la variable del estado del sensor
+
+Verificamos en que estado está el sensor 0 encendido y 1 apagado 
+Si esta apagado el sensor apagamos todas las terminales o segmentos  
+   
+Compara la variable contador con los númerosy enciende los segmentos para mostrar el número en el display
+	Si el 0 encienden los segmentos del a al f
+	Si el 1 encienden los segmentos b y c
+	Si el 2 encienden los segmentos a,b,d,e y g
+	Si el 3 encienden los segmentos a,b,c,d y g
+	Si el 4 encienden los segmentos b,c,f y g
+	Si el 5 encienden los segmentos a,c,d,f y g
+	Si el 6 encienden los segmentos a,c,d,e,f y g
+	Si el 7 encienden los segmentos a,b,y c 
+	Si el 8 encienden los segmentos a,b,c,d,e,f y g
+	Si el 9 encienden los segmentos a,b,c,d,f y g
+
+Incrementamos el contador 
+damos un segundo para que vuelva a consultar el estado del sensor. 
+Comparamos el valor del contador si llegamos al numero máximo (9) de ser así el contador se reinicia. 
